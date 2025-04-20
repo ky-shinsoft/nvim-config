@@ -7,7 +7,7 @@ return {
     telescope.setup({
       defaults = {
         path_display = { 'smart' }
-      },
+      }
     })
 
     vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = 'Open files finder' })
