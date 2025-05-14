@@ -2,11 +2,10 @@ return {
   'williamboman/mason.nvim',
   dependencies = {
     'williamboman/mason-lspconfig.nvim',
-    'WhoIsSethDaniel/mason-tool-installer.nvim'
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
   },
   config = function()
     local mason = require('mason')
-    local mason_lspconfig = require('mason-lspconfig')
     local mason_tool_installer = require('mason-tool-installer')
 
     mason.setup({
@@ -20,9 +19,12 @@ return {
     })
 
     mason_tool_installer.setup({
-      ensure_installed = {},
+      ensure_installed = {
+        'lua-language-server',
+        'emmet-ls',
+      },
+      auto_update = true,
+      run_on_start = true,
     })
-
-    mason_lspconfig.setup()
-  end
+  end,
 }
