@@ -3,8 +3,5 @@ return {
   dependencies = {
     'catppuccin/nvim',
     'SmiteshP/nvim-navic'
-  },
-  opts = {
-    theme = 'catppuccin'
   }
 }

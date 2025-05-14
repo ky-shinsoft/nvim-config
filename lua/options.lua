@@ -25,4 +25,3 @@ vim.diagnostic.config({ virtual_text = true })
 
 -- clipborad
 opt.clipboard:append('unnamedplus')
-
