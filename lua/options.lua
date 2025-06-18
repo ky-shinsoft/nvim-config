@@ -1,4 +1,6 @@
 local opt = vim.opt
+local diagnostic = vim.diagnostic
+local api = vim.api
 
 -- tabs and indent
 opt.tabstop = 2
@@ -21,7 +23,12 @@ opt.termguicolors = true
 opt.wildmenu = true
 opt.mouse = 'a'
 opt.splitright = true
-vim.diagnostic.config({ virtual_text = true })
+opt.formatoptions:remove({ 'o' })
+diagnostic.config({ virtual_text = true })
 
--- clipborad
+-- clipboard
 opt.clipboard:append('unnamedplus')
+
+-- backup
+-- opt.backup = true
+vim.cmd('filetype plugin on')
